@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+app.use(express.json());
+
 const VERIFY_TOKEN = process.env.VERIFY_TOKEN || "carbot123";
 
 app.get("/", (req, res) => {
